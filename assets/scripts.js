@@ -7,13 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.querySelector(".toggle-button");
     const nav = document.querySelector(".header-right nav");
 
-    // Toggle menu on hamburger button click
     toggleButton.addEventListener("click", function() {
         nav.classList.toggle("active");
         toggleButton.classList.toggle("active");
     });
 
-    // Close menu when clicking on a menu item
     const menuItems = document.querySelectorAll(".header-right nav ul li a");
 
     menuItems.forEach(function(item) {
@@ -22,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             nav.classList.remove("active");
             toggleButton.classList.remove("active");
 
-            // Scroll to the section
-            const target = item.getAttribute("href").substr(1); // get rid of #
+            const target = item.getAttribute("href").substr(1);
             const section = document.getElementById(target);
             if (section) {
                 section.scrollIntoView({ behavior: "smooth" });
@@ -32,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 window.addEventListener('resize', () => {
-  headerHeight = header.offsetHeight; // Update header height on window resize
+  headerHeight = header.offsetHeight; 
 });
 
 window.addEventListener('wheel', (event) => {
@@ -81,7 +78,6 @@ function scrollToSection(index) {
   });
 }
 
-// Add this to fix the header issue
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
     header.classList.add('scrolled');
