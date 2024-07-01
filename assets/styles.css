@@ -1,4 +1,4 @@
-/* Global Styles */
+
 html, body {
     height: 100%;
     background-color: #23272a;
@@ -251,14 +251,14 @@ textarea.form-control {
 /* Media Queries */
 @media (max-width: 767px) {
     header {
-        flex-direction: row-reverse; /* Posisikan nav dan toggle-button ke sebelah kanan */
+        flex-direction: row-reverse; 
         padding: 8px 20px;
     }
 
     .header-left {
-        order: 2; /* Letakkan judul ke urutan ke-2 (kanan) di dalam flexbox */
-        flex-grow: 1; /* Biarkan elemen ini memanjang untuk mengisi ruang kosong */
-        text-align: left; /* Atur teks ke kiri */
+        order: 2; 
+        flex-grow: 1;
+        text-align: left; 
     }
 
     .header-left h1 {                                                                                                                                       
@@ -268,18 +268,18 @@ textarea.form-control {
     }
 
     .header-right {
-        order: 1; /* Letakkan nav ke urutan ke-1 (kiri) di dalam flexbox */
+        order: 1; 
     }
 
     .toggle-button {
-        display: block; /* Tampilkan tombol hamburger */
-        margin-right: 1px; /* Berikan margin kanan agar terpisah dari judul */
+        display: block; 
+        margin-right: 1px;
     }
 
     .header-right nav {
-        display: none; /* Sembunyikan menu utama pada layar kecil */
+        display: none; 
         position: absolute;
-        top: 65px; /* Sesuaikan dengan kebutuhan */
+        top: 65px; 
         left: 0;
         background-color: #202020;
         width: 100%;
